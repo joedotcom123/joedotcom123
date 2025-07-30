@@ -1,0 +1,236 @@
+* {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+    height: 100%;
+    background: url('Media/Background.png') no-repeat center center fixed;
+    background-size: cover;
+}
+
+.door {
+    position: fixed;
+    top: 1vw;
+    left: 1vw;
+}
+
+.float1-x-door {
+    animation: floatX 4s ease-in-out infinite;
+}
+
+.float1-y-door {
+    animation: floatY 6s ease-in-out infinite;
+}
+
+.float1-x-door:hover, .float1-y-door:hover {
+    animation-play-state: paused;
+}
+
+.door-container {
+    position: relative;
+    width: 100px;
+    height: calc(100px * 936/410);
+    transition: transform 0.2s ease;
+    transform-origin: center;
+}
+
+.door-container:hover {
+    transform: scale(1.1);
+}
+
+.door-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+
+
+@keyframes floatY {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    25% {
+        transform: translateY(-5px);
+    }
+
+    75% {
+        transform: translateY(5px);
+    }
+}
+
+@keyframes floatX {
+    0%, 100% {
+        transform: translateX(0);
+    }
+    25% {
+        transform: translateX(-5px);
+    }
+
+    75% {
+        transform: translateX(5px);
+    }
+}
+
+.WorkExperienceTitle h1 {
+    font-size: 4vw;
+    justify-content: center;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    color: #333;
+    display: flex;
+}
+
+.WorkExperienceTitle h1 span {
+    opacity: 0;
+    animation: fadeIn 0.3s forwards, wave 2s ease-in-out infinite;
+    animation-delay: calc(var(--i)*0.1s), calc(var(--i)*0.1s + 0.1s);
+}
+
+.WorkExperienceTitle {
+    animation: slideInBounce 1.2s cubic-bezier(.68,-0.55,.27,1.55) both;
+}
+
+@keyframes fadeIn {
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes wave {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(10px);
+    }
+}
+
+.WorkExperience {
+    display: flex;
+    flex-direction: column;
+}
+
+.Experiences {
+    margin: 0 auto;
+}
+
+.image-container{
+    position: relative;
+    width: 50vw;
+    margin-bottom: 30px;
+    border: 2px solid #333;
+}
+
+.image-container img.background-image {
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 1;
+}
+
+.experience-text {
+    position: relative;
+    padding: 2vw;
+    color: #333;
+    z-index: 2;
+}
+
+.experience-text h1 {
+    font-size: 2.5vw;
+    margin-bottom: 20px;
+    text-align: center;
+    animation: slideInBounce 1.2s cubic-bezier(.68,-0.55,.27,1.55) both;
+}
+
+.experience-text h1 span {
+    display: inline-block;
+    animation: wave 2s ease-in-out infinite;
+    animation-delay: calc(var(--i)*0.1s + 0.1s);
+}
+
+.company {
+    text-align: center;
+    text-decoration: underline;
+    margin-bottom: 15px;
+    font-size: 2.25vw;
+}
+
+.description {
+    font-size: 2vw;
+}
+
+@media (max-width: 768px) {
+    .door-container {
+        width: 40px;
+        height: calc(40px * 936/410);
+    }
+
+    @keyframes floatY {
+        0%, 100% {
+            transform: translateY(0);
+        }
+        25% {
+            transform: translateY(-2px);
+        }
+
+        75% {
+            transform: translateY(2px);
+        }
+    }
+
+    @keyframes floatX {
+        0%, 100% {
+            transform: translateX(0);
+        }
+        25% {
+            transform: translateX(-2px);
+        }
+
+        75% {
+            transform: translateX(2px);
+        }
+    }
+}
+
+.float1-x {
+    animation: floatX 6s ease-in-out infinite;
+}
+
+.float1-y {
+    animation: floatY 4s ease-in-out infinite;
+}
+
+.float1-x:hover, .float1-y-door:hover {
+    animation-play-state: paused;
+}
+
+.float2-x {
+    animation: floatX 3s ease-in-out infinite;
+}
+
+.float2-y {
+    animation: floatY 5s ease-in-out infinite;
+}
+
+.float2-x:hover, .float1-y-door:hover {
+    animation-play-state: paused;
+}
+
+.float3-x {
+    animation: floatX 4s ease-in-out infinite;
+}
+
+.float3-y {
+    animation: floatY 6s ease-in-out infinite;
+}
+
+.float3-x:hover, .float1-y-door:hover {
+    animation-play-state: paused;
+}

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contacts</title>
+    <link rel="stylesheet" href="style-contact.css">
+</head>
+<body>
+    <main>
+        <div class="contact-container">
+            <div class="door">
+                <div class="float1-x-door">
+                    <div class="float1-y-door">
+                        <a href="index.html">
+                            <div class="door-container">
+                                <div class="image">
+                                    <img src="Media/Closed1.png" id="door-img" class="door-image">
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="contactTitle">
+                <h1>
+                    <span style="--i:0">C</span><span style="--i:1">o</span><span style="--i:2">n</span><span style="--i:3">t</span><span style="--i:4">a</span><span style="--i:5">c</span><span style="--i:6">t</span>&nbsp;
+                    <span style="--i:7">M</span><span style="--i:8">e</span>
+                </h1>
+            </div>
+            <div class="form-container">
+                <div class="float1-x">
+                    <div class="float1-y"> 
+                        <div class="image-container">
+                            <img src="Media/Block1.png" class="background-image">
+                            <form action="https://api.web3forms.com/submit" method="POST" class="contact-form" id="form">
+                                <input type="hidden" name="access_key" value="686369ec-5ec7-437b-b25f-3a4af150a020">
+                                <input type="hidden" name="redirect" value="https://joedotcom123.github.io/joedotcom123/thankyou.html">
+                                <input type="text" name="name" placeholder="Name" required>
+                                <input type="email" name="_replyto" placeholder="Email" required>
+                                <textarea name="message" placeholder="Message" required></textarea>
+                                <input type="checkbox" name="botcheck" class="hidden" style="display: none;">
+                                <button type="submit">Send</button>
+                            </form>
+                        </div>        
+                    </div>      
+                </div>
+            </div>
+        <script src="app-homepage.js"></script>
+        <script>
+            window.onload = function() {
+            document.getElementById("form").reset();
+            };
+        </script>
+    </main>
+
+</body>
+</html>
